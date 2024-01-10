@@ -1,0 +1,151 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+main {
+}
+
+.header {
+    margin: 15px 0 !important;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-location {
+    display: inline-flex;
+    align-items: center;
+}
+
+.header-location svg {
+    height: 13px;
+    margin-right: 5px;
+}
+
+.logo {
+    display: inline-flex;
+    font-weight: bolder;
+}
+
+.left-side h1 {
+    color: #0000ff;
+    margin-bottom: 30px;
+    font-weight: bolder;
+}
+
+.left-side {
+    display: flex;
+    height: 100%;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-side-inside {
+    margin: 0 20px;
+}
+
+.left-side-inside h1 {
+    color: blue;
+}
+
+.right-side img {
+    border-radius: 10px;
+}
+
+.service {
+    display: inline-flex;
+    background-color: #E6E6EB;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    align-items: center;
+}
+
+.service:hover {
+    background-color: #e0e0e0;
+}
+
+.service span {
+    padding: 10px;
+}
+
+.call-to-action {
+    background-color: #0000ff;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.call-to-action:hover {
+    background-color: #0000d1;
+}
+
+.construction {
+    margin: 20px 0 !important;
+}
+
+.construction-banner {
+    background: url('стройка.jpg') no-repeat center center;
+    filter: grayscale(75%);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    height: 400px; /* Adjust the height as needed */
+    color: white;
+}
+
+.banner-content {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(2px);
+    text-align: center;
+}
+
+.banner-content h1 {
+    font-size: 2em; /* Adjust the font size as needed */
+    margin-bottom: 20px;
+}
+
+.banner-content p {
+    font-size: 1em; /* Adjust the font size as needed */
+}
+
+.advantage-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.card-number {
+    font-size: 75px;
+    color: blue;
+}
+
+@font-face {
+    font-family: 'Hollow';
+    src: url('VinnieBoombahNF.ttf') format('truetype'),
+    url('VinnieBoombahNF.woff') format('woff'),
+    url('VinnieBoombahNF.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.card-number {
+    font-family: 'Hollow', sans-serif;
+}

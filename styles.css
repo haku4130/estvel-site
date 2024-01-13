@@ -93,7 +93,7 @@ main {
 }
 
 .construction-banner {
-    background: url('стройка.jpg') no-repeat center center;
+    background: url('стройка-на-закате.png') no-repeat center center;
     filter: grayscale(75%);
     background-size: cover;
     display: flex;
@@ -134,18 +134,7 @@ main {
 
 .card-number {
     font-size: 75px;
-    color: blue;
-}
-
-@font-face {
-    font-family: 'Hollow';
-    src: url('VinnieBoombahNF.ttf') format('truetype'),
-    url('VinnieBoombahNF.woff') format('woff'),
-    url('VinnieBoombahNF.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.card-number {
-    font-family: 'Hollow', sans-serif;
+    color: #F5F5F5;
+    -webkit-text-stroke: 1px blue;
+    font-family: "Arial", sans-serif;
 }

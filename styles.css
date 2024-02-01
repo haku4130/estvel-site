@@ -29,7 +29,7 @@ main {
 }
 
 .left-side h1 {
-    color: #0000ff;
+    color: #1848ff;
     margin-bottom: 30px;
     font-weight: bolder;
 }
@@ -44,15 +44,24 @@ main {
 }
 
 .left-side-inside {
-    margin: 0 20px;
+    margin: 0 50px;
 }
 
 .left-side-inside h1 {
-    color: blue;
+    color: #1848ff;
+}
+
+.right-side {
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .right-side img {
-    border-radius: 10px;
+    transition: transform 0.7s ease;
+}
+
+.right-side img:hover {
+    transform: scale(103%);
 }
 
 .service {
@@ -67,7 +76,7 @@ main {
 }
 
 .service:hover {
-    background-color: #e0e0e0;
+    background-color: #dcd4d4;
 }
 
 .service span {
@@ -75,7 +84,7 @@ main {
 }
 
 .call-to-action {
-    background-color: #0000ff;
+    background-color: #1848ff;
     color: #ffffff;
     border: none;
     padding: 15px 30px;
@@ -85,7 +94,7 @@ main {
 }
 
 .call-to-action:hover {
-    background-color: #0000d1;
+    background-color: #002cd2;
 }
 
 .construction {
@@ -93,14 +102,14 @@ main {
 }
 
 .construction-banner {
-    background: url('стройка-на-закате.png') no-repeat center center;
+    background: url('snapedit_1705142575274.png') no-repeat center center;
     filter: grayscale(75%);
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    height: 400px; /* Adjust the height as needed */
+    height: 400px;
     color: white;
 }
 
@@ -109,32 +118,179 @@ main {
     margin: 0 auto;
     padding: 20px;
     border-radius: 30px;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(2px);
     text-align: center;
 }
 
 .banner-content h1 {
-    font-size: 2em; /* Adjust the font size as needed */
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
 .banner-content p {
-    font-size: 1em; /* Adjust the font size as needed */
+    font-size: 1em;
 }
 
 .advantage-card {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    height: 170px;
     align-items: center;
-    background-color: #F5F5F5;
+    background-color: #1848ff;
     border-radius: 10px;
+    color: white;
+    transition: background-color 0.7s ease, color 0.7s ease;
+}
+
+.advantage-card:hover {
+    background-color: #F5F5F5;
+    color: black;
 }
 
 .card-number {
-    font-size: 75px;
-    color: #F5F5F5;
-    -webkit-text-stroke: 1px blue;
+    line-height: 1;
+    margin-top: 20px;
+    font-size: 70px;
+    color: #1848ff;
+    -webkit-text-stroke: 1px white;
     font-family: "Arial", sans-serif;
+    transition: -webkit-text-stroke 0.5s ease, color 0.5s ease;
+}
+
+.advantage-card-text {
+    width: 60%;
+    text-align: center;
+    margin: auto 0;
+}
+
+.advantage-card:hover .card-number {
+    -webkit-text-stroke: 1px #1848ff;
+    color: #F5F5F5;
+}
+
+.list-card {
+    height: 200px;
+    border: 2px solid #E6E6EB;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.list-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.list-card:hover::before {
+    opacity: 1;
+}
+
+.list-card:hover .list-card-number,
+.list-card:hover .list-card-text {
+    color: white;
+}
+
+.list-card-number, .list-card-text {
+    margin-left: 20px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    transition: color 0.8s ease;
+}
+
+.list-card-number {
+    margin-top: 20px;
+    color: #1848ff;
+}
+
+.list-card-text {
+    margin-bottom: 20px;
+}
+
+.list-card-1::before {
+    background-image: url("кран-1.jpg");
+}
+
+.list-card-2::before {
+    background-image: url("кран-2.jpg");
+}
+
+.list-card-3::before {
+    background-image: url("кран-3.jpg");
+}
+
+.list-card-4::before {
+    background-image: url("стройка-на-закате.png");
+}
+
+.map {
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contacts {
+    margin-bottom: 20px;
+}
+
+.contacts-inside {
+    padding: 20px 20px;
+    align-items: normal;
+    flex-direction: column;
+}
+
+.contacts-title {
+    color: #1848ff;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.address-title {
+    opacity: 0.5;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.address {
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.hours-title {
+    font-size: 12px;
+    opacity: 0.5;
+    font-weight: bold;
+}
+
+.hours {
+    font-weight: bolder;
+}
+
+.footer {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer span {
+    font-weight: bolder;
+    font-size: larger;
+    color: #1848ff;
+    padding: 10px 0;
 }

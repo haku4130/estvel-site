@@ -1,20 +1,30 @@
 body,
 html {
   font-size: 15px;
-  height: 100%;
   margin: 0;
   font-family: 'Montserrat', sans-serif !important;
+  scroll-behavior: smooth;
 }
 
 .header {
-  margin: 15px 0 !important;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 15px 0 !important;
   display: flex;
   justify-content: space-between;
+  position: -webkit-sticky;
+  z-index: 1000;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 .header-location {
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
+  transition: color 1s;
+  text-decoration: underline;
 }
 
 .header-location svg {
@@ -25,12 +35,13 @@ html {
 .logo {
   display: inline-flex;
   font-weight: bolder;
+  cursor: pointer;
+  transition: color 1s;
 }
 
-.left-side h1 {
+.logo:hover,
+.header-location:hover {
   color: #1848ff;
-  margin-bottom: 30px;
-  font-weight: bolder;
 }
 
 .left-side {
@@ -43,23 +54,40 @@ html {
 }
 
 .left-side-inside {
-  margin: 0 50px;
+  margin: auto 8%;
 }
 
 .left-side-inside h1 {
+  font-size: clamp(15px, 2.5vw, 2.5rem);
   color: #1848ff;
+  font-weight: bolder;
+  margin-bottom: 30px;
+}
+
+.right-side-inside {
+  overflow: hidden;
+  border-radius: 10px;
+  height: 100%;
+  position: relative;
 }
 
 .right-side {
-  overflow: hidden;
-  border-radius: 10px;
+  height: 500px;
 }
 
-.right-side img {
-  transition: transform 0.7s ease;
+.right-side-inside img {
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: transform 0.7s ease, opacity 0.8s ease-in-out;
 }
 
-.right-side img:hover {
+.right-side-inside img:hover {
   transform: scale(103%);
 }
 
@@ -79,6 +107,7 @@ html {
 }
 
 .service span {
+  font-size: clamp(10px, 1.1vw, 1.1rem);
   padding: 10px;
 }
 
@@ -86,7 +115,13 @@ html {
   background: #1848ff;
   color: #ffffff;
   border: none;
-  padding: 15px 30px;
+  @media (max-width: 768px) {
+    padding: 10px 20px;
+  }
+  @media (min-width: 768px) {
+    padding: 15px 30px;
+  }
+  font-size: clamp(15px, 1.3vw, 1.5rem);
   margin-top: 20px;
   border-radius: 30px;
   transition: background-color 0.3s ease;
@@ -105,7 +140,6 @@ html {
 }
 
 .construction-banner {
-  background: url('snapedit_1705142575274.png') no-repeat center center;
   filter: grayscale(75%);
   background-size: cover;
   display: flex;
@@ -117,22 +151,28 @@ html {
 }
 
 .banner-content {
-  width: 70%;
-  margin: 0 auto;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+  @media (min-width: 768px) {
+    width: 70%;
+  }
+  margin: 0 0;
   padding: 20px;
   border-radius: 30px;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(2px);
   text-align: center;
+  max-height: 100%;
 }
 
 .banner-content h1 {
-  font-size: 2em;
+  font-size: clamp(25px, 2.5%, 2rem);
   margin-bottom: 20px;
 }
 
 .banner-content p {
-  font-size: 1em;
+  font-size: clamp(12px, 1.75%, 1.3rem);
 }
 
 .advantage-card {
@@ -141,10 +181,24 @@ html {
   flex-direction: column;
   height: 170px;
   align-items: center;
+  justify-content: space-evenly;
   background-color: #1848ff;
   border-radius: 10px;
   color: white;
   transition: background-color 0.7s ease, color 0.7s ease;
+}
+@media (max-width: 768px) {
+  #advantage1 {
+    padding-right: 3px !important;
+  }
+
+  #advantage2 {
+    padding: 0 3px !important;
+  }
+
+  #advantage3 {
+    padding-left: 3px !important;
+  }
 }
 
 .advantage-card:hover {
@@ -154,17 +208,21 @@ html {
 
 .card-number {
   line-height: 1;
-  margin-top: 20px;
-  font-size: 30px;
+  font-size: clamp(30px, 2.5vw, 2.5rem);
   color: #1848ff;
   -webkit-text-stroke: 1px white;
   transition: -webkit-text-stroke 0.5s ease, color 0.5s ease;
 }
 
 .advantage-card-text {
-  width: 60%;
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+  @media (min-width: 768px) {
+    width: 60%;
+  }
+  font-size: clamp(9px, 1.1vw, 1.1rem);
   text-align: center;
-  margin: auto 0;
 }
 
 .advantage-card:hover .card-number {
@@ -173,7 +231,12 @@ html {
 }
 
 .list-card {
-  height: 200px;
+  @media (max-width: 768px) {
+    height: 200px;
+  }
+  @media (min-width: 768px) {
+    height: 245px;
+  }
   border: 2px solid #e6e6eb;
   border-radius: 10px;
   display: flex;
@@ -198,67 +261,36 @@ html {
   transition: opacity 0.8s ease;
 }
 
-.list-card-1::before {
-  opacity: 1;
-}
-
 .list-card:hover::before {
   opacity: 1;
-}
-
-.list-card-1:hover::before {
-  opacity: 0;
 }
 
 .list-card:hover .list-card-number,
 .list-card:hover .list-card-text {
   color: white;
-}
-
-.list-card-1:hover .list-card-number {
-  color: #1848ff;
-}
-
-.list-card-1:hover .list-card-text {
-  color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 3);
 }
 
 .list-card-number,
 .list-card-text {
-  margin-left: 20px;
+  margin: 20px;
   font-weight: bolder;
   letter-spacing: 1px;
   transition: color 0.8s ease;
 }
 
 .list-card-number {
-  margin-top: 20px;
   color: #1848ff;
 }
 
-.list-card-1 .list-card-number,
-.list-card-1 .list-card-text {
+.list-card.active::before {
+  opacity: 1;
+}
+
+.list-card.active .list-card-number,
+.list-card.active .list-card-text {
   color: white;
-}
-
-.list-card-text {
-  margin-bottom: 20px;
-}
-
-.list-card-1::before {
-  background-image: url('кран-1.jpg');
-}
-
-.list-card-2::before {
-  background-image: url('кран-2.jpg');
-}
-
-.list-card-3::before {
-  background-image: url('кран-3.jpg');
-}
-
-.list-card-4::before {
-  background-image: url('стройка-на-закате.png');
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 3);
 }
 
 .map {
@@ -283,25 +315,20 @@ html {
   margin-bottom: 20px;
 }
 
-.address-title {
+.contacts-subtitle {
   opacity: 0.5;
   font-weight: bold;
   font-size: 12px;
 }
 
-.address {
+.contacts-content {
   font-weight: bolder;
   margin-bottom: 20px;
 }
 
-.hours-title {
-  font-size: 12px;
-  opacity: 0.5;
-  font-weight: bold;
-}
-
-.hours {
-  font-weight: bolder;
+.contacts-content a {
+  color: #1848ff;
+  text-decoration: none;
 }
 
 .footer {

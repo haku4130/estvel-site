@@ -1,0 +1,286 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ЭСТВЭЛ - Электромонтажные Работы</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script
+      src="https://kit.fontawesome.com/27f88a609d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="{% static 'favicon-1.png' %}" type="image/png" />
+    <style>
+      .construction-banner {
+        background: url("{% static 'snapedit_1705142575274.png' %}") no-repeat
+          center center;
+      }
+      .list-card-1::before {
+        background-image: url("{% static 'кабель в гофре.jpeg' %}");
+      }
+
+      .list-card-2::before {
+        background-image: url("{% static 'электромонтажные работы в квартире.jpg' %}");
+      }
+
+      .list-card-3::before {
+        background-image: url("{% static 'теплый пол.jpeg' %}");
+        filter: grayscale(75%);
+      }
+
+      .list-card-4::before {
+        background-image: url("{% static 'настройки щитка.png' %}");
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main container">
+      <div class="header" data-aos="fade-in">
+        <div id="logo" class="logo">ООО «ЭСТВЭЛ»</div>
+        <div id="location" class="header-location">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="bi bi-geo-alt"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+            />
+            <path
+              d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+            />
+          </svg>
+          г. Реутов
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-8 my-4 my-md-0" data-aos="fade-in">
+          <div class="left-side py-4 py-md-0">
+            <div class="left-side-inside">
+              <h1>ЭЛЕКТРОМОНТАЖНЫЕ РАБОТЫ</h1>
+              <div class="services row">
+                <div class="service col">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-check"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"
+                    />
+                  </svg>
+                  <span> Выезд за 30 минут </span>
+                </div>
+                <div class="service col">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-check"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"
+                    />
+                  </svg>
+                  <span> Гарантия 12 месяцев </span>
+                </div>
+                <div class="service col">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-check"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"
+                    />
+                  </svg>
+                  <span> Работы строго в срок </span>
+                </div>
+              </div>
+              <a href="tel:+79603331674"
+                ><button class="call-to-action">
+                  <i class="fa-solid fa-phone" style="margin-right: 10px"></i
+                  >Позвонить
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 right-side" data-aos="fade-in">
+          <div class="right-side-inside">
+            <img
+              id="mainImage"
+              src="{% static 'главный электрик.jpg' %}"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+        </div>
+        <div id="advantage1" class="col-4" data-aos="fade-in">
+          <div class="advantage-card">
+            <div class="card-number">01</div>
+            <div class="advantage-card-text">
+              Квалифицированная бригада работников
+            </div>
+          </div>
+        </div>
+        <div id="advantage2" class="col-4" data-aos="fade-in">
+          <div class="advantage-card">
+            <div class="card-number">02</div>
+            <div class="advantage-card-text">
+              Профессиональное оборудование и техника
+            </div>
+          </div>
+        </div>
+        <div id="advantage3" class="col-4" data-aos="fade-in">
+          <div class="advantage-card">
+            <div class="card-number">03</div>
+            <div class="advantage-card-text">Быстрый и удобный сервис</div>
+          </div>
+        </div>
+        <div class="col-12 construction" data-aos="fade-in">
+          <div class="construction-banner">
+            <div class="banner-content">
+              <h1 class="fw-bolder">
+                Мы специализируемся на успешном проектировании и реализации
+                объектов в области электромонтажа.
+              </h1>
+              <p>
+                ЭСТВЭЛ - ваш надежный партнер на рынке электромонтажных услуг.
+                Мы специализируемся на проектировании, монтаже и обслуживании
+                электротехнических систем для промышленных, коммерческих и жилых
+                объектов. Наша команда - это опытные профессионалы с обширным
+                опытом работы в отрасли.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-7" data-aos="fade-in">
+          <div class="list-card list-card-1">
+            <div class="list-card-number">01</div>
+            <div class="list-card-text">Прокладка кабеля в гофре</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-5" data-aos="fade-in">
+          <div class="list-card list-card-2">
+            <div class="list-card-number">02</div>
+            <div class="list-card-text">Электромонтажные работы в квартире</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-5" data-aos="fade-in">
+          <div class="list-card list-card-3">
+            <div class="list-card-number">03</div>
+            <div class="list-card-text">
+              Укладка электрического теплого пола
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-7" data-aos="fade-in">
+          <div class="list-card list-card-4">
+            <div class="list-card-number">04</div>
+            <div class="list-card-text">Сборка электрощитов</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 contacts" data-aos="fade-in">
+          <div class="left-side contacts-inside">
+            <span class="contacts-title">Контакты</span>
+            <span class="contacts-subtitle">Адрес:</span>
+            <span class="contacts-content"
+              >Московская область, г Видное, Строительная ул, д. 1, стр. подзем.
+              (цок) эт/1
+            </span>
+            <span class="contacts-subtitle">Время работы:</span>
+            <span class="contacts-content">Пн-Пт: с 8:00 до 17:00</span>
+            <span class="contacts-subtitle">Телефон:</span>
+            <span class="contacts-content"
+              ><a href="tel:+79603331674">+7 960 333-16-74</a></span
+            >
+          </div>
+        </div>
+        <div id="map" class="col-12 col-md-6 col-lg-8" data-aos="fade-in">
+          <div
+            class="d-flex justify-content-center map"
+            style="position: relative; overflow: hidden"
+          >
+            <a
+              href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps"
+              style="color: #eee; font-size: 12px; position: absolute; top: 0px"
+              >Москва</a
+            ><a
+              href="https://yandex.ru/maps/10719/vidnoe/house/stroitelnaya_ulitsa_1/Z04YcQdoTUMDQFtvfXl0dHRlZQ==/?ll=37.708464%2C55.555861&utm_medium=mapframe&utm_source=maps&z=17"
+              style="
+                color: #eee;
+                font-size: 12px;
+                position: absolute;
+                top: 14px;
+              "
+              >Строительная улица, 1 — Яндекс Карты</a
+            ><iframe
+              src="https://yandex.ru/map-widget/v1/?ll=37.708464%2C55.555861&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjYyNDk0OBKZAdCg0L7RgdGB0LjRjywg0JzQvtGB0LrQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsINCb0LXQvdC40L3RgdC60LjQuSDQs9C-0YDQvtC00YHQutC-0Lkg0L7QutGA0YPQsywg0JLQuNC00L3QvtC1LCDQodGC0YDQvtC40YLQtdC70YzQvdCw0Y8g0YPQu9C40YbQsCwgMSIKDXjVFkIVNDleQg%2C%2C&z=17"
+              width="100%"
+              height="400"
+              frameborder="1"
+              allowfullscreen="true"
+              style="position: relative"
+            ></iframe>
+          </div>
+        </div>
+        <div class="col-12" data-aos="fade-in" data-aos-offset="-50">
+          <div class="footer">
+            <span>&copy; ООО "ЭСТВЭЛ" 2024</span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const mainImageUrls = [
+        "{% static 'главный электрик.jpg' %}",
+        "{% static 'главный электрик2.jpg' %}",
+      ];
+    </script>
+    <script src="{% static 'app.js' %}"></script>
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script> -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 2000,
+        once: true,
+      });
+    </script>
+  </body>
+</html>

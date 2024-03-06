@@ -1,3 +1,6 @@
-venv
+venv/
+.idea/
+.vscode/
+db.sqlite3
+estvel.ru*.log*
 __pycache__/
-.idea
